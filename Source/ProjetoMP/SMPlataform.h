@@ -25,7 +25,14 @@ public:
 
 	UPROPERTY(EditAnyWhere)
 	float SpeedPlataform = 20;
+
+	void AddActiceTrigger();
+	void RemoveActiceTrigger();
+
 private:
 	FVector GlobalStartLocation;
 	FVector GlobalTargetLocation;
+
+	UPROPERTY(EditAnywhere)
+	int ActiveTriggers = 1;
 };

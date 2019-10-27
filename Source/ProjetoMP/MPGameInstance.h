@@ -13,5 +13,12 @@ UCLASS()
 class PROJETOMP_API UMPGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
+
+	UMPGameInstance(const FObjectInitializer& ObjectInitializer);
+
+	virtual void Init();
+
+	UFUNCTION(Exec)
+		void Host();
 	
 };
