@@ -21,12 +21,12 @@ void ASMPlataform::BeginPlay()
 	GlobalTargetLocation = GetTransform().TransformPosition(TargetLocation);
 }
 
-void ASMPlataform::AddActiceTrigger()
+void ASMPlataform::AddActiveTrigger()
 {
 	ActiveTriggers++;
 }
 
-void ASMPlataform::RemoveActiceTrigger()
+void ASMPlataform::RemoveActiveTrigger()
 {
 	if (ActiveTriggers > 0)
 	{

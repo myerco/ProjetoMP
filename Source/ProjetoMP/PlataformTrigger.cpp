@@ -13,7 +13,6 @@ APlataformTrigger::APlataformTrigger()
 	TriggerVolume = CreateDefaultSubobject<UBoxComponent>(FName("TriggerVolume"));
 	if (!ensure(TriggerVolume != nullptr ))  return;
 	RootComponent = TriggerVolume;
-
 	TriggerVolume->OnComponentBeginOverlap.AddDynamic(this,&APlataformTrigger::OnOverlapBegin);
 	TriggerVolume->OnComponentEndOverlap.AddDynamic(this, &APlataformTrigger::OnOverlapEnd);
 
@@ -40,7 +39,7 @@ void APlataformTrigger::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AAct
 	//UE_LOG(LogTemp,Warning,TEXT("Trigger ativada"));
 	for (ASMPlataform* Plataform : PlataformsTriggers) 
 	{
-		Plataform->AddActiceTrigger();
+		Plataform->AddActiveTrigger();
 	}
 }
 
@@ -49,7 +48,7 @@ void APlataformTrigger::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor
 	//UE_LOG(LogTemp, Warning, TEXT("Trigger desativada"));
 	for (ASMPlataform* Plataform : PlataformsTriggers)
 	{
-		Plataform->RemoveActiceTrigger();
+		Plataform->RemoveActiveTrigger();
 	}
 }
 
