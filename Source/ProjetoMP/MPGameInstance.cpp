@@ -16,6 +16,7 @@ void UMPGameInstance::Init()
 void UMPGameInstance::Host()
 {
 	UEngine* Engine = GetEngine();
+	UE_LOG(LogTemp, Warning, TEXT("Host..."));
 	//if (!ensure(Engine != nullptr)) return;
 	//Engine->AddOnScreenDebugMessage(0,2,FColor::Green,TEXT("Host mensagem");
 
