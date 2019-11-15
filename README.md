@@ -1,6 +1,6 @@
 # Projeto Plataforms Multiplayer Unreal 4.23 C++
 
-# Preparado o projeto no drive D:
+## Preparando o projeto no drive D:
 > Utilize PowerShell
 
     mkdir -p D:\UnrealProjects  
@@ -8,18 +8,24 @@
     cd ProjetoMP
     git status
 
-# Atualizando o projeto no servidor
+## Atualizando o projeto no servidor
     git add .
     git commit -m "Atualizando o projeto.. Alteração de movimentação de personagem"
     git push origin master
 
-# Atulizan o projeto no cliente (local)
+## Atulizando o projeto no cliente (local)
     git status
     git pull origin master
 
-# Softwares adicionais
+## Softwares adicionais
 1. **Hamachi**: Para criar uma rede privada VPN.
 
-# Configuração do personagem base
+## Executando o projeto multiplayer
+1. Cliente
+    & "C:\Program Files\Epic Games\UE_4.23\Engine\Binaries\Win64\UE4Editor.exe" "D:\UnrealProjects\TaoMpCpp\TaoMpCpp.uproject" /Game/ThirdPersonCPP/Maps/ThirdPersonExampleMap -server -log
+2. Servidor  
+    & "C:\Program Files\Epic Games\UE_4.23\Engine\Binaries\Win64\UE4Editor.exe" "D:\UnrealProjects\TaoMpCpp\TaoMpCpp.uproject" 192.168.0.148 -game -log
+
+## Configuração do personagem base
 * Charecter Movement: Jumping/Falling
 
