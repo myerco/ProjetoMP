@@ -20,11 +20,14 @@
 ## Softwares adicionais
 1. **Hamachi**: Para criar uma rede privada VPN.
 
-## Executando o projeto multiplayer
-1. Cliente
-    & "C:\Program Files\Epic Games\UE_4.23\Engine\Binaries\Win64\UE4Editor.exe" "D:\UnrealProjects\TaoMpCpp\TaoMpCpp.uproject" /Game/ThirdPersonCPP/Maps/ThirdPersonExampleMap -server -log
-2. Servidor  
-    & "C:\Program Files\Epic Games\UE_4.23\Engine\Binaries\Win64\UE4Editor.exe" "D:\UnrealProjects\TaoMpCpp\TaoMpCpp.uproject" 192.168.0.148 -game -log
+## Executando 
+Servidor:   
+
+    & "C:\Program Files\Epic Games\UE_4.23\Engine\Binaries\Win64\UE4Editor.exe" "D:\UnrealProjects\ProjetoMP\ProjetoMP.uproject" /Game/Maps/LevelTest -server -log
+
+Cliente:
+
+    & "C:\Program Files\Epic Games\UE_4.23\Engine\Binaries\Win64\UE4Editor.exe" "D:\UnrealProjects\ProjetoMP\ProjetoMP.uproject" 192.168.0.148 -game -log
 
 ## Configuração do personagem base
 * Charecter Movement: Jumping/Falling
