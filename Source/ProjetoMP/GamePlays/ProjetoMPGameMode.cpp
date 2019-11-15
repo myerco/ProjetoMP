@@ -1,7 +1,7 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #include "ProjetoMPGameMode.h"
-#include "ProjetoMPCharacter.h"
+#include "Characters/ProjetoMPCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 AProjetoMPGameMode::AProjetoMPGameMode()
