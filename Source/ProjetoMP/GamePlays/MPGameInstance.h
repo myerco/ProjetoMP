@@ -19,6 +19,15 @@ class PROJETOMP_API UMPGameInstance : public UGameInstance
 	virtual void Init();
 
 	UFUNCTION(Exec)
-		void Host();
+	void Host();
+
+	UFUNCTION(Exec)
+	void Join(const FString& Address);
+
+	UFUNCTION(BlueprintCallable, Category = Menu)
+	void LoadMenu();
+
+private:
+	TSubclassOf<class UUserWidget> MenuClass;
 	
 };
