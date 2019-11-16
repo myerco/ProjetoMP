@@ -1,9 +1,34 @@
-# ProjetoMP
-Projeto Multiplayer c++
+# Projeto Plataforms Multiplayer Unreal 4.23 C++
 
-# Hamachi
-Utilizando Hamachi para criar uma rede privada VPN
+## Preparando o projeto no drive D:
+> Utilize PowerShell
 
-# Configuração do personagem base
+    mkdir -p D:\UnrealProjects  
+    git clone https://github.com/myerco/ProjetoMP.git
+    cd ProjetoMP
+    git status
+
+## Atualizando o projeto no servidor
+    git add .
+    git commit -m "Atualizando o projeto.. Alteração de movimentação de personagem"
+    git push origin master
+
+## Atulizando o projeto no cliente (local)
+    git status
+    git pull origin master
+
+## Softwares adicionais
+1. **Hamachi**: Para criar uma rede privada VPN.
+
+## Executando 
+Servidor:   
+
+    & "C:\Program Files\Epic Games\UE_4.23\Engine\Binaries\Win64\UE4Editor.exe" "D:\UnrealProjects\ProjetoMP\ProjetoMP.uproject" /Game/Maps/LevelTest -server -log
+
+Cliente:
+
+    & "C:\Program Files\Epic Games\UE_4.23\Engine\Binaries\Win64\UE4Editor.exe" "D:\UnrealProjects\ProjetoMP\ProjetoMP.uproject" 192.168.0.148 -game -log
+
+## Configuração do personagem base
 * Charecter Movement: Jumping/Falling
 
