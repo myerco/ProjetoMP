@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "MenuInterface.h"
 #include "MainMenu.generated.h"
 
 /**
@@ -13,8 +14,9 @@ UCLASS()
 class PROJETOMP_API UMainMenu : public UUserWidget
 {
 	GENERATED_BODY()
+
 protected:
-	virtual bool Initialize();
+	virtual bool Initialize() override;
 
 private:
 		UPROPERTY(meta = (BindWidget))
@@ -25,5 +27,7 @@ private:
 
 	UFUNCTION()
 	void HostServer();
+
+	IMenuInterface* MenuInterface;
 
 };

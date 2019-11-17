@@ -3,10 +3,10 @@
 
 #include "MainMenu.h"
 #include "Components/Button.h"
-#include "../GamePlays/MPGameInstance.h"
 
 bool UMainMenu::Initialize()
 {
+
 	bool Success = Super::Initialize();
 	if (!Success) return false;
 
@@ -21,4 +21,10 @@ bool UMainMenu::Initialize()
 void UMainMenu::HostServer()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Indo para o servidor"));
+
+	if (MenuInterface != nullptr)
+	{
+		MenuInterface->Host();
+	}
+
 }

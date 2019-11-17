@@ -4,13 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "../UI/MenuInterface.h"
 #include "MPGameInstance.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PROJETOMP_API UMPGameInstance : public UGameInstance
+class PROJETOMP_API UMPGameInstance : public UGameInstance, public IMenuInterface
 {
 	GENERATED_BODY()
 
