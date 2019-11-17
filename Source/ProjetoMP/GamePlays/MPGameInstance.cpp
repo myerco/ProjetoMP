@@ -7,6 +7,7 @@
 #include "UObject/ConstructorHelpers.h"
 #include "Plataforms/PlataformTrigger.h"
 #include "Blueprint/UserWidget.h"
+#include "../UI/MainMenu.h"
 
 UMPGameInstance::UMPGameInstance(const FObjectInitializer& ObjectInitializer)
 {
@@ -59,7 +60,8 @@ void UMPGameInstance::LoadMenu()
 {
 	// Prepara a variável Menu utilizando o Widget 
 	if (!ensure(MenuClass != nullptr)) return;
-	UUserWidget *Menu =  CreateWidget<UUserWidget>(this, MenuClass);
+	//UUserWidget *Menu =  CreateWidget<UUserWidget>(this, MenuClass);
+	UMainMenu* Menu = CreateWidget<UMainMenu>(this, MenuClass);
 
 	// Adiciona o menu na tela
 	if (!ensure(Menu != nullptr)) return;
@@ -74,6 +76,8 @@ void UMPGameInstance::LoadMenu()
 	APlayerController* PlayerController = GetFirstLocalPlayerController();
 	PlayerController->SetInputMode(InputModeData);
 	PlayerController->bShowMouseCursor = true;
+
+	Menu->SetMenuInterface(this);
 }
 
 
